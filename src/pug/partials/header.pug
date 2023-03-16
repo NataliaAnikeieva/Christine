@@ -1,0 +1,37 @@
+header#header
+	.header__container
+		a.hamburger(href="#navigation--mobile") menu
+		nav.navigation
+			ul.navigation__list
+				li.navigation__item.active
+					a.navigation__link(href="#") Home  
+					span
+						a(href="#").arrow.fa-solid.fa-angle-down
+					ul.navigation__list--sub
+						li.navigation__item
+							a.navigation__link(href="#") child 1
+						li.navigation__item
+							a.navigation__link(href="#") child 2
+								span
+									a(href="#").plus.fa-solid.fa-plus
+							ul.navigation__list--sub
+								li.navigation__item
+									a.navigation__link(href="#") grandchild 1
+								li.navigation__item
+									a.navigation__link(href="#") grandchild 2
+						li.navigation__item
+							a.navigation__link(href="#") child 3
+						li.navigation__item
+							a.navigation__link(href="#") child 4
+				li.navigation__item
+					a.navigation__link(href="#") Demo                 
+				li.navigation__item
+					a.navigation__link(href="#")  New Patient Center   
+				li.navigation__item
+					a.navigation__link(href="#")    About Us
+				li.navigation__item
+					a.navigation__link(href="#") Services                 
+				li.navigation__item
+					a.navigation__link(href="#")   Testimonials  
+				li.navigation__item
+					a.navigation__link(href="#") Contact Us

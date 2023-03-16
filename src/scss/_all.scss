@@ -1,0 +1,110 @@
+@import "../scss/_mixins";
+@import "../scss/typography";
+
+* {
+	box-sizing: border-box;
+}
+html,body {
+	height: 100%; 
+}
+body {
+	background-color: grey;
+}
+[class*="__container"] {
+    max-width: 1240px;
+    margin: 0 auto; 
+    padding: 0 15px; 
+}
+header {
+	width: 100%;
+	background-color: $bgc1;
+}
+.hamburger {
+	display: none;
+}
+.navigation {
+	display: flex;
+	&__list {
+		width: 945px;
+		display: flex;
+		justify-content: space-between;
+		.sublevel-1 {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			top: 100%;
+			left: 0;
+		}
+	}
+	&__item {
+		position: relative;
+		padding: 30px;
+		@include transition(background);
+		&:hover {
+			.sublevel-1 {
+				opacity: 1;
+				visibility: visible;
+			}
+			background-color: $bgc2;
+		}
+	}
+	&__link {
+		color: $color1;
+		font-size: $fs-sm;
+		font-weight: 700;
+		text-transform: uppercase;
+		&:hover {
+			color: $color2;
+		}
+	} 
+}
+.active {
+	background-color: $bgc3;
+}
+.arrow {
+	color: $color1;
+	padding-left: 5px;
+}
+.plus {
+	color: $color1;
+	background-color: $bgc2;
+	padding: 20px;
+}
+.navigation__list--sub {
+	background-color: $bgc3;
+	width: 200px;
+	.sublevel-2 {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
+}
+.navigation__list--sub .navigation__item {
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	padding: 30px 0 30px 15px;
+	background-color: $bgc2;
+	&:nth-child(2) {
+		padding: 0 0 0 15px;
+	}
+	&:hover {
+		background-color: $bgc3;
+		.sublevel-2 {
+				opacity: 1;
+				visibility: visible;
+			}
+	}
+}
+@media (max-width: 768px) {
+	.hamburger {
+		display: flex;
+	}	
+	.navigation {
+		display: none;
+	}
+}
