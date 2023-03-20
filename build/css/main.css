@@ -149,6 +149,60 @@ header {
         display: none;
     }
 }
+.navigation__list--sub .navigation__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.navigation__list--sub .navigation__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 35px;
+    position: relative;
+    width: 100%;
+}
+.navigation__list--sub .navigation__link:hover .opener {
+    color: white;
+}
+.navigation__list--sub .opener {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 30px;
+    background: #44687f;
+}
+.navigation__list--sub .opener:hover {
+    color: #35a2eb;
+    background: cyan;
+}
+.navigation__list--sub .opener:before {
+    content: "+";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+.navigation__list--sub .open-close--active .navigation__link {
+    background: #35a2eb;
+    color: white;
+}
+.navigation__list--sub .open-close--active .opener {
+    color: #35a2eb;
+    background: cyan;
+}
+.navigation__list--sub .open-close--active .opener:before {
+    content: "-";
+}
+
+.navigation__list--sub .sublevel-2 {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
 /*NORMALIZE.CSS*/
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
