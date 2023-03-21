@@ -20,16 +20,17 @@
   <body>
     <wrapper> 
       <header id="header">
-        <div class="header__container"><a class="hamburger" href="#navigation--mobile">menu</a>
+        <div class="header__container">
+          <div class="hamburger-menu"><a class="hamburger" href="#navigation--mobile"> <span></span></a><a class="hamburger-text" href="#">Menu</a></div>
           <nav class="navigation">
             <ul class="navigation__list">
-              <li class="navigation__item active"><a class="navigation__link" href="#">Home  </a><span><a class="arrow fa-solid fa-angle-down" href="#"></a></span>
+              <li class="navigation__item"><a class="navigation__link active" href="#">Home  </a>
                 <ul class="navigation__list--sub">
                   <li class="navigation__item"><a class="navigation__link" href="#">child 1</a></li>
-                  <li class="navigation__item"><a class="navigation__link" href="#">child 2<span><a class="plus fa-solid fa-plus" href="#"></a></span></a>
-                    <ul class="navigation__list--sub">
-                      <li class="navigation__item"><a class="navigation__link" href="#">grandchild 1</a></li>
-                      <li class="navigation__item"><a class="navigation__link" href="#">grandchild 2</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="#">child 2</a>
+                    <ul class="navigation__list--sub sub">
+                      <li class="navigation__item"><a class="navigation__link sub-link" href="#">grandchild 1</a></li>
+                      <li class="navigation__item"><a class="navigation__link sub-link" href="#">grandchild 2</a></li>
                     </ul>
                   </li>
                   <li class="navigation__item"><a class="navigation__link" href="#">child 3</a></li>

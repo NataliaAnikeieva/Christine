@@ -30,6 +30,14 @@ header {
     background-color: #44687f;
 }
 
+.header__container {
+    padding: 27px 0;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
 .hamburger {
     display: none;
 }
@@ -57,26 +65,24 @@ header {
 }
 .navigation__item {
     position: relative;
-    padding: 30px;
-    -webkit-transition: background 0.5s ease 0s;
-    -o-transition: background 0.5s ease 0s;
-    transition: background 0.5s ease 0s;
-}
-.navigation__item:hover {
-    background-color: #c2e3f9;
 }
 .navigation__item:hover .sublevel-1 {
     opacity: 1;
     visibility: visible;
 }
 .navigation__link {
+    padding: 30px;
     color: #fff;
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
+    -webkit-transition: color 0.5s ease 0s , background 0.5s ease 0s;
+    -o-transition: color 0.5s ease 0s , background 0.5s ease 0s;
+    transition: color 0.5s ease 0s , background 0.5s ease 0s;
 }
 .navigation__link:hover {
     color: #000;
+    background-color: #c2e3f9;
 }
 
 .active {
@@ -89,20 +95,30 @@ header {
 }
 
 .opener {
-    display: inline-block;
-    font: 14px/1 font-awesome;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    padding-right: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 30px;
+    background: #44687f;
 }
 .opener:hover {
-    background-color: #c2e3f9;
+    color: #35a2eb;
+    background: #c2e3f9;
+}
+.opener:before {
+    content: "+";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .navigation__list--sub {
-    width: 200px;
-    background-color: #c2e3f9;
+    width: 210px;
+    margin-top: 29px;
 }
 .navigation__list--sub .sublevel-2 {
     opacity: 0;
@@ -125,7 +141,6 @@ header {
             align-items: center;
     position: relative;
     background-color: #35a2eb;
-    margin-bottom: 2px;
 }
 .navigation__list--sub .navigation__item:hover {
     background-color: #c2e3f9;
@@ -137,16 +152,107 @@ header {
 
 .navigation__list--sub .navigation__link {
     padding: 20px 57px 20px 18px;
+    border-bottom: 2px solid #c2e3f9;
+}
+.navigation__list--sub .navigation__link:hover {
+    color: #fff;
 }
 
-@media (max-width: 768px) {
-    .hamburger {
+.sub {
+    margin-top: 0;
+}
+
+.navigation__list--sub .navigation__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.navigation__list--sub .navigation__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 35px;
+    position: relative;
+    width: 100%;
+}
+.navigation__list--sub .navigation__link:hover .opener {
+    color: #fff;
+}
+.navigation__list--sub .open-close--active .navigation__link {
+    background: #35a2eb;
+    color: #fff;
+}
+.navigation__list--sub .open-close--active .opener {
+    color: #000;
+    background: #c2e3f9;
+}
+.navigation__list--sub .open-close--active .opener:before {
+    content: "-";
+}
+
+.navigation__list--sub .navigation__link.sub-link {
+    background-color: #fff;
+    color: #000;
+}
+.navigation__list--sub .navigation__link.sub-link:hover {
+    background-color: #c2e3f9;
+}
+
+.navigation__list--sub .sublevel-2 {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+@media (max-width: 920px) {
+    .hamburger-menu {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        padding-left: 50px;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .hamburger {
+        z-index: 100;
+        position: relative;
+        height: 20px;
+        width: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+    .hamburger::before, .hamburger::after {
+        content: "";
+        background-color: #fff;
+        height: 4px;
+    }
+    .hamburger span {
+        height: 4px;
+        background-color: #fff;
+    }
+    .hamburger-text {
+        padding-left: 20px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 900;
+        font-size: 24px;
     }
     .navigation {
         display: none;
+    }
+    .navigation__list {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 }
 /*NORMALIZE.CSS*/

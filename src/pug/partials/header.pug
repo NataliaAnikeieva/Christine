@@ -1,24 +1,23 @@
 header#header
 	.header__container
-		a.hamburger(href="#navigation--mobile") menu
+		.hamburger-menu
+			a.hamburger(href="#navigation--mobile") 
+				span
+			a(href="#").hamburger-text Menu
 		nav.navigation
 			ul.navigation__list
-				li.navigation__item.active
-					a.navigation__link(href="#") Home  
-					span
-						a(href="#").arrow.fa-solid.fa-angle-down
+				li.navigation__item
+					a.navigation__link.active(href="#") Home  
 					ul.navigation__list--sub
 						li.navigation__item
 							a.navigation__link(href="#") child 1
 						li.navigation__item
 							a.navigation__link(href="#") child 2
-								span
-									a(href="#").fa-solid.fa-plus
-							ul.navigation__list--sub
+							ul.navigation__list--sub.sub
 								li.navigation__item
-									a.navigation__link(href="#") grandchild 1
+									a.navigation__link.sub-link(href="#") grandchild 1
 								li.navigation__item
-									a.navigation__link(href="#") grandchild 2
+									a.navigation__link.sub-link(href="#") grandchild 2
 						li.navigation__item
 							a.navigation__link(href="#") child 3
 						li.navigation__item
