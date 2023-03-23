@@ -44,10 +44,25 @@ header {
 	}
 	&__item {
 		position: relative;
+		&.active {
+			.navigation__link {
+				background-color: $bgc3;
+			}
+			&:hover {
+				.navigation__link {
+					background-color: $bgc3;
+					color: $color1;
+				}
+			}
+		}
 		&:hover {
 			.sublevel-1 {
 				opacity: 1;
 				visibility: visible;
+			}
+			.navigation__link {
+				color: $color2;
+				background-color: $bgc2;
 			}	
 		}
 	}
@@ -57,15 +72,12 @@ header {
 		font-size: $fs-sm;
 		font-weight: 700;
 		text-transform: uppercase;
+		display: block;
 		@include transition(color background);
 		&:hover {
-			color: $color2;
-			background-color: $bgc2;
+			
 		}
 	} 
-}
-.active {
-	background-color: $bgc3;
 }
 .arrow {
 	color: $color1;

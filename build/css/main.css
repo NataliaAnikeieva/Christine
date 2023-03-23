@@ -66,9 +66,20 @@ header {
 .navigation__item {
     position: relative;
 }
+.navigation__item.active .navigation__link {
+    background-color: #35a2eb;
+}
+.navigation__item.active:hover .navigation__link {
+    background-color: #35a2eb;
+    color: #fff;
+}
 .navigation__item:hover .sublevel-1 {
     opacity: 1;
     visibility: visible;
+}
+.navigation__item:hover .navigation__link {
+    color: #000;
+    background-color: #c2e3f9;
 }
 .navigation__link {
     padding: 30px;
@@ -76,19 +87,11 @@ header {
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
+    display: block;
     -webkit-transition: color 0.5s ease 0s , background 0.5s ease 0s;
     -o-transition: color 0.5s ease 0s , background 0.5s ease 0s;
     transition: color 0.5s ease 0s , background 0.5s ease 0s;
 }
-.navigation__link:hover {
-    color: #000;
-    background-color: #c2e3f9;
-}
-
-.active {
-    background-color: #35a2eb;
-}
-
 .arrow {
     color: #fff;
     padding-left: 5px;
