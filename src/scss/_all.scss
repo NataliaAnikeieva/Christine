@@ -167,7 +167,7 @@ header {
 	color: $color1;
 	&:hover {
 		background-color: $bgc2;
-	}
+	} 
 }
 .navigation__list--sub .navigation__link.sub-link {
 	background-color: $bgc4;
@@ -221,7 +221,6 @@ header {
 		flex-direction: column;
 	}
 	.navigation__item.active .navigation__link  {
-		background-color: transparent;
+		background-color: #f7f7f7;
 	}
-	
 }

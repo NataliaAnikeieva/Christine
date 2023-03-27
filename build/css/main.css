@@ -267,7 +267,7 @@ header {
                 flex-direction: column;
     }
     .navigation__item.active .navigation__link {
-        background-color: transparent;
+        background-color: #f7f7f7;
     }
 }
 /*NORMALIZE.CSS*/
