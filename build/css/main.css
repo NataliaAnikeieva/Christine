@@ -68,13 +68,26 @@ header {
     background-color: #35a2eb;
     color: #fff;
 }
+.navigation__item.has-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.navigation__item.has-child:after {
+    content: "+";
+    display: block;
+    color: #fff;
+    font-size: 17px;
+    position: absolute;
+    left: 85%;
+    top: 48%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
 .navigation__item:hover .sublevel-1 {
     opacity: 1;
     visibility: visible;
-}
-.navigation__item:hover .navigation__link {
-    color: #000;
-    background-color: #c2e3f9;
 }
 .navigation__link {
     padding: 30px;
@@ -84,10 +97,9 @@ header {
     text-transform: uppercase;
     display: block;
 }
-
-.arrow {
-    color: #fff;
-    padding-left: 5px;
+.navigation__link:hover {
+    color: #000;
+    background-color: #c2e3f9;
 }
 
 .opener {
@@ -145,14 +157,6 @@ header {
     visibility: visible;
 }
 
-.navigation__list--sub .navigation__link {
-    padding: 20px 57px 20px 18px;
-    border-bottom: 2px solid #c2e3f9;
-}
-.navigation__list--sub .navigation__link:hover {
-    color: #fff;
-}
-
 .sub {
     margin-top: 0;
 }
@@ -171,6 +175,7 @@ header {
 }
 .navigation__list--sub .navigation__link:hover .opener {
     color: #fff;
+    background: #c2e3f9;
 }
 .navigation__list--sub .open-close--active .navigation__link {
     background: #35a2eb;
@@ -182,6 +187,14 @@ header {
 }
 .navigation__list--sub .open-close--active .opener:before {
     content: "-";
+}
+
+.navigation__list--sub .navigation__link.sub-link1 {
+    background-color: #35a2eb;
+    color: #fff;
+}
+.navigation__list--sub .navigation__link.sub-link1:hover {
+    background-color: #c2e3f9;
 }
 
 .navigation__list--sub .navigation__link.sub-link {
@@ -196,6 +209,10 @@ header {
     opacity: 1;
     visibility: visible;
     position: relative;
+}
+
+.mm-panels .sublevel-2 .mm-navbar {
+    background-color: #35a2eb;
 }
 
 @media (max-width: 920px) {
@@ -248,6 +265,9 @@ header {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
+    }
+    .navigation__item.active .navigation__link {
+        background-color: transparent;
     }
 }
 /*NORMALIZE.CSS*/
