@@ -19,9 +19,7 @@ header {
 	width: 100%;
 	background-color: $bgc1;
 }
-.header__container {
-	padding: 27px 0;
-}
+
 .hamburger-menu {
 	display: none;
 }
@@ -31,7 +29,6 @@ header {
 .navigation {
 	display: flex;
 	&__list {
-		width: 945px;
 		display: flex;
 		justify-content: space-between;
 		.sublevel-1 {
@@ -55,6 +52,16 @@ header {
 				}
 			}
 		}
+		&.has-child {
+			&:after {
+				display: inline-block;
+				content: "\2b";
+				width: 20px;
+				height: 20px;
+				color: $color2;
+				font-size: 50px;
+			}
+		}
 		&:hover {
 			.sublevel-1 {
 				opacity: 1;
@@ -73,10 +80,6 @@ header {
 		font-weight: 700;
 		text-transform: uppercase;
 		display: block;
-		@include transition(color background);
-		&:hover {
-			
-		}
 	} 
 }
 .arrow {
@@ -104,7 +107,6 @@ header {
 }
 .navigation__list--sub {
 	width: 210px;
-	margin-top: 29px;
 	.sublevel-2 {
 		opacity: 0;
 		visibility: hidden;
@@ -128,13 +130,6 @@ header {
 			}
 	}
 }
-.navigation__list--sub .navigation__link {
-	padding: 20px 57px 20px 18px;
-	border-bottom: 2px solid $bgc2;
-	&:hover {
-		color: $color1;
-	}
-}
 .sub {
 	margin-top: 0;
 }
@@ -150,6 +145,7 @@ header {
 		&:hover {
 			.opener {
 				color: $color1;
+				background: $bgc2;
 			}
 		}
 	}

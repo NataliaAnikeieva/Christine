@@ -30,10 +30,6 @@ header {
     background-color: #44687f;
 }
 
-.header__container {
-    padding: 27px 0;
-}
-
 .hamburger-menu {
     display: none;
 }
@@ -48,7 +44,6 @@ header {
     display: flex;
 }
 .navigation__list {
-    width: 945px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -88,10 +83,8 @@ header {
     font-weight: 700;
     text-transform: uppercase;
     display: block;
-    -webkit-transition: color 0.5s ease 0s , background 0.5s ease 0s;
-    -o-transition: color 0.5s ease 0s , background 0.5s ease 0s;
-    transition: color 0.5s ease 0s , background 0.5s ease 0s;
 }
+
 .arrow {
     color: #fff;
     padding-left: 5px;
@@ -121,7 +114,6 @@ header {
 
 .navigation__list--sub {
     width: 210px;
-    margin-top: 29px;
 }
 .navigation__list--sub .sublevel-2 {
     opacity: 0;
